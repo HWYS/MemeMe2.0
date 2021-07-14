@@ -25,7 +25,7 @@ class MeMeEditViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var bottomTextField: UITextField!
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.strokeColor: UIColor.white,
+        NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white,
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSAttributedString.Key.strokeWidth:  -4
@@ -173,7 +173,7 @@ class MeMeEditViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func Cancel_Click(_ sender: UIBarButtonItem) {
-        goToInitialUIState()
+        dismiss(animated: true, completion: nil)
     }
     
     func goToInitialUIState() {
